@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web3 Token-Gated Community Pass</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: #1e293b;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+    h1 { font-size: 1.4rem; margin-top: 0; }
+    p { color: #94a3b8; font-size: 0.95rem; }
+    input, button {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.75rem;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    input {
+      background: #0f172a;
+      color: #f8fafc;
+      border: 1px solid #334155;
+    }
+    button {
+      background: #3b82f6;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover { background: #2563eb; }
+    .demo-btn { background: #475569; }
+    .demo-btn:hover { background: #334155; }
+    .status {
+      margin-top: 1.25rem;
+      padding: 1rem;
+      border-radius: 8px;
+      display: none;
+    }
+    .granted { background: #064e3b; color: #a7f3d0; border: 1px solid #10b981; }
+    .denied { background: #7f1d1d; color: #fecaca; border: 1px solid #ef4444; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Web3 Community Pass</h1>
+    <p>Register your username and connect your wallet to verify your NFT/Token pass.</p>
+
+    <input type="text" id="username" placeholder="Enter your username (e.g. Madimakatso)" />
+
+    <button id="connectBtn">Connect MetaMask Wallet</button>
+    <button id="demoBtn" class="demo-btn">Use Demo Wallet (No MetaMask)</button>
+
+    <div id="statusBox" class="status"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
